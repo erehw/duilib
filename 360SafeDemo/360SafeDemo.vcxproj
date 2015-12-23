@@ -72,24 +72,28 @@
     <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>d:\vs2013\run\$(PlatformName)_$(Configuration)\</OutDir>
+    <OutDir>../bin/</OutDir>
     <IntDir>d:\output\$(SolutionName)\$(ProjectName)\$(PlatformName)_$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>d:\vs2013\run\$(PlatformName)_$(Configuration)\</OutDir>
+    <OutDir>../bin/</OutDir>
     <IntDir>d:\output\$(SolutionName)\$(ProjectName)\$(PlatformName)_$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
-    <OutDir>d:\vs2013\run\$(PlatformName)_$(Configuration)\</OutDir>
+    <OutDir>../bin/</OutDir>
     <IntDir>d:\output\$(SolutionName)\$(ProjectName)\$(PlatformName)_$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
-    <OutDir>d:\vs2013\run\$(PlatformName)_$(Configuration)\</OutDir>
+    <OutDir>../bin/</OutDir>
     <IntDir>d:\output\$(SolutionName)\$(ProjectName)\$(PlatformName)_$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>

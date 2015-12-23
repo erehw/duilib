@@ -35,6 +35,16 @@ namespace DuiLib
 
 		// 对应按钮的5个状态图
 		void SetFiveStatusImage(LPCTSTR pStrImage);
+
+
+      //增加一个一体化的
+
+      /*
+      常规、按下、hot,disable，焦点 (4或5个)
+      默认是4个图，默认是水平的
+      */
+      bool SetButtonImage ( LPCTSTR file_name, unsigned int count = 4, bool horizon = true );
+
 		void SetFadeAlphaDelta(BYTE uDelta);
 		bool GetFadeAlphaDelta();
 

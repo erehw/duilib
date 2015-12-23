@@ -438,7 +438,6 @@ namespace DuiLib
 
    void CButtonUI::PaintStatusImage ( HDC hDC )
    {
-     
 
       if ( IsFocused ( ) ) m_uButtonState |= UISTATE_FOCUSED;
       else m_uButtonState &= ~UISTATE_FOCUSED;
@@ -508,7 +507,11 @@ namespace DuiLib
       if ( 0 == count || count > 5 ) return false;
       const TImageInfo* data = NULL;
       data = m_pManager->GetImageEx ( file_name );
-     
+
+      if ( !data )
+      {
+         return false;
+      }
 
       int pic_width = horizon ? ( data->nX / count ) : data->nX;
       int pic_height = horizon ? ( data->nY ) : ( data->nY ) / count;

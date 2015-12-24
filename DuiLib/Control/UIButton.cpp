@@ -348,7 +348,7 @@ namespace DuiLib
       m_uFadeAlphaDelta = uDelta;
    }
 
-   bool CButtonUI::GetFadeAlphaDelta ( )
+   BYTE CButtonUI::GetFadeAlphaDelta ( )
    {
       return m_uFadeAlphaDelta;
    }
@@ -506,6 +506,11 @@ namespace DuiLib
    {
       if ( 0 == count || count > 5 ) return false;
       const TImageInfo* data = NULL;
+      assert ( m_pManager );
+      if ( !m_pManager )
+      {
+         return false;
+      }
       data = m_pManager->GetImageEx ( file_name );
 
       if ( !data )
@@ -519,7 +524,8 @@ namespace DuiLib
       SetFixedWidth ( pic_width );
       SetFixedHeight ( pic_height );
 
-      TDrawInfo * draw_info_array[] = {
+      TDrawInfo * draw_info_array[] =
+      {
          &m_diNormal,
          &m_diPushed,
          &m_diHot,
@@ -528,7 +534,7 @@ namespace DuiLib
       };
 
 
-      for ( int i = 0; i < count; ++i )
+      for ( unsigned int i = 0; i < count; ++i )
       {
          int x_start = horizon ? i*pic_width : 0;
          int y_start = horizon ? 0 : i*pic_height;
@@ -549,5 +555,6 @@ namespace DuiLib
       return true;
 
    }
+
 
 }
